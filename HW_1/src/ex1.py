@@ -39,8 +39,6 @@ def ex_b():
                     d[c_i, d_i] * c[c_i] * s[0, s_i]
     print(sum_p_g_and_i0)
     print(sum_p_g_and_i0/sum(sum_p_g_and_i0))
-    print(sum(sum_p_g_and_i0))
-    print(sum(p_g_and_i0))
     print(p_i0)
 
 
