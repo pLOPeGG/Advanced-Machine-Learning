@@ -48,9 +48,11 @@ def ex_c():
     for c_i in range(2):
         for d_i in range(2):
             for i_i in range(2):
-                sum_p_s_g += c[c_i] * d[c_i, d_i] * i[d_i, i_i] * g[2*d_i+i_i, 0] * s[i_i,:] 
+                sum_p_s_g += c[c_i] * d[c_i, d_i] * i[d_i, i_i] * \
+                             g[2*d_i+i_i, 0] * s[i_i, :]
                 for s_i in range(2):
-                    p_g0 += c[c_i] * d[c_i, d_i] * i[d_i, i_i] * g[2*d_i+i_i, :] * s[i_i, s_i]
+                    p_g0 += c[c_i] * d[c_i, d_i] * i[d_i, i_i] * \
+                            g[2*d_i+i_i, :] * s[i_i, s_i]
     print('P(S, G=g0) = {}'.format(sum_p_s_g))
     print('P(G=g0) = {}'.format(p_g0))
     print('P(S|G=g0) = {}'.format(sum_p_s_g/p_g0[0]))
@@ -60,6 +62,7 @@ def main():
     ex_a()
     ex_b()
     ex_c()
+
     pass
 
 
