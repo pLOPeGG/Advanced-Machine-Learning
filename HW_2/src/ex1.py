@@ -41,6 +41,7 @@ class Mixture:
 
     def resp(self, x: np.ndarray):
         tot_resp = self.p_mixt(x)
+        print(tot_resp, [b.p(x) for b in self.bern_l], sep='\n')
         return np.array([p*bern.p(x)/tot_resp for p, bern
                          in zip(self.pi, self.bern_l)])
 
@@ -81,7 +82,9 @@ def exb():
 
 
 def main():
+    print('A')
     exa()
+    print('B')
     exb()
     pass
 
